@@ -1,5 +1,5 @@
 {% set name = "pyeit" %}
-{% set version = "1.1.6" %}
+{% set version = "1.1.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/liubenyuan/pyEIT/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 6f14243d3896036e9602fb8b85071d5fcb04d843f3017c9c4a40a61a643fc46f
+  sha256: 388fce68478862cb574e829faabf34089ffda95410d8852cba95e1b176f56cbc
 
 build:
   noarch: python

@@ -1,13 +1,13 @@
 {% set name = "pyeit" %}
-{% set version = "1.2.2" %}
+{% set version = "1.2.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/liubenyuan/pyEIT/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 7513c0060b48bac78cafa9c4c64cb80498a8f1111461228ffc5c75d905cf6971
+  url: https://github.com/eitcom/pyEIT/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: a033254cb815339791ed1e589373e45c15a42d527c6801a07e62eee534f06888
 
 build:
   noarch: python
@@ -17,19 +17,22 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
   run:
-    - python >=3.6
+    - python >=3.7
     - numpy
     - scipy
     - pandas
     - matplotlib-base
     - shapely
+    - trimesh
+    - imageio >=2.19
 
 test:
   imports:
     - pyeit
   source_files:
+    - tests/data
     - tests/*.py
   commands:
     - pytest tests/
@@ -37,7 +40,7 @@ test:
     - pytest
 
 about:
-  home: https://github.com/liubenyuan/pyEIT
+  home: https://github.com/eitcom/pyEIT
   summary: A Python based framework for EIT (Electrical Impedance Tomography)
   license: BSD-3-Clause
   license_file: LICENSE.txt

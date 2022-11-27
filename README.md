@@ -1,7 +1,7 @@
 About pyeit
 ===========
 
-Home: https://github.com/liubenyuan/pyEIT
+Home: https://github.com/eitcom/pyEIT
 
 Package license: BSD-3-Clause
 

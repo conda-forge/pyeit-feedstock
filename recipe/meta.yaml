@@ -32,6 +32,7 @@ test:
   imports:
     - pyeit
   source_files:
+    - tests/data
     - tests/*.py
   commands:
     - pytest tests/
